@@ -8,7 +8,7 @@ fs.readFile("sample.csv", { encoding: "utf-8" }, (err, data) => {
 const splitNames = (samp) => {
   const output = [];
 
-  const arr = samp.split("\n").filter(Boolean); // REMOVE ANY EMPTY STRINGS FROM PARSE
+  const arr = samp.split("\n").filter(Boolean); // REMOVE ANY EMPTY ROWS FROM PARSE
   arr.shift(); //   REMOVE FIRST LINE OF VALUES
   arr.map((a) => {
     let arr = a.split(",").map((s) => s.trim()); //   SPLIT BY COMMA THEN TRIM EACH ITEM IN ARRAY
